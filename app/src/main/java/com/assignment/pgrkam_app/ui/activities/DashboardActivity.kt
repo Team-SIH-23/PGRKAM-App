@@ -61,7 +61,7 @@ class DashboardActivity : AppCompatActivity(), NavigationView.OnNavigationItemSe
             }
 
             R.id.foreign_counselling -> {
-
+                findNavController(R.id.nav_host_fragment).navigate(R.id.counsellingFragment)
             }
 
             R.id.local_services -> {

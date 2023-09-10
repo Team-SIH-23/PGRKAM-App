@@ -19,6 +19,9 @@
         <action
             android:id="@+id/action_homeFragment_to_skillDevelopmentFragment"
             app:destination="@id/skillDevelopmentFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_counsellingFragment"
+            app:destination="@id/counsellingFragment" />
     </fragment>
     <fragment
         android:id="@+id/searchCounsellorFragment"
@@ -55,4 +58,9 @@
         android:name="com.assignment.pgrkam_app.ui.fragments.SkillDevelopmentFragment"
         android:label="fragment_skill_development"
         tools:layout="@layout/fragment_skill_development" />
+    <fragment
+        android:id="@+id/counsellingFragment"
+        android:name="com.assignment.pgrkam_app.ui.fragments.CounsellingFragment"
+        android:label="fragment_counselling"
+        tools:layout="@layout/fragment_counselling" />
 </navigation>
