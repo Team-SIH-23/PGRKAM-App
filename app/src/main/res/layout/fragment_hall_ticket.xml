@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.fragments.HallTicketFragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:id="@+id/rlLogo"
+            android:layout_width="match_parent"
+            android:layout_marginBottom="6dp"
+            android:layout_height="100dp">
+
+            <ImageView
+                android:id="@+id/ivPgrkam"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_centerInParent="true"
+                android:src="@drawable/pgrkam" />
+        </RelativeLayout>
+        <TextView
+            android:id="@+id/tvPgrkam"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/pgrkam"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:textAlignment="center"
+            android:layout_below="@id/rlLogo"/>
+
+        <TextView
+            android:id="@+id/pgrkamDesc1"
+            android:textSize="16dp"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/desc_one"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:layout_below="@id/tvPgrkam"/>
+        <TextView
+            android:id="@+id/pgrkamDesc2"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:textSize="16dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/desc_two"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:layout_below="@id/pgrkamDesc1"/>
+
+
+        <View
+            android:id="@+id/view_one"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_below="@id/pgrkamDesc2"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="16dp"
+            android:background="#E6E6E6" />
+
+        <TextView
+            android:id="@+id/tvCandidateInformation"
+            android:layout_below="@id/view_one"
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/candidate_information"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:textSize="17dp"/>
+
+        <RelativeLayout
+            android:id="@+id/rl_one"
+            android:padding="16dp"
+            android:layout_below="@id/tvCandidateInformation"
+            android:layout_marginTop="12dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tvName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:text="Name"/>
+            <TextView
+                android:id="@+id/userName"
+                android:layout_toRightOf="@id/tvName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="48dp"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:text="Maaz Karim"/>
+
+            <TextView
+                android:id="@+id/dob"
+                android:layout_marginLeft="24dp"
+               android:layout_toRightOf="@id/userName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:text="DOB"/>
+
+            <TextView
+                android:layout_toRightOf="@id/dob"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="48dp"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:text="Information Not Provided"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_two"
+            android:padding="16dp"
+            android:layout_below="@id/rl_one"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tvDistrict"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:text="District"/>
+            <TextView
+                android:id="@+id/distrcitName"
+                android:layout_toRightOf="@id/tvDistrict"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="39dp"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:text="Patiala"/>
+
+            <TextView
+                android:id="@+id/mobile"
+                android:layout_marginLeft="52dp"
+                android:layout_toRightOf="@id/distrcitName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:text="Mobile"/>
+
+            <TextView
+                android:layout_toRightOf="@id/mobile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="48dp"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:text="7631586913"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_three"
+            android:padding="16dp"
+            android:layout_below="@id/rl_two"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tvGender"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:text="Gender"/>
+            <TextView
+                android:id="@+id/genderType"
+                android:layout_toRightOf="@id/tvGender"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="40dp"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:text="Male"/>
+
+            <TextView
+                android:id="@+id/qualification"
+                android:layout_marginLeft="60dp"
+                android:layout_toRightOf="@id/genderType"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:text="Qualification"/>
+
+            <TextView
+                android:layout_toRightOf="@id/qualification"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="32dp"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:text="Graduate"/>
+
+        </RelativeLayout>
+
+        <View
+            android:id="@+id/view_two"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_below="@id/rl_three"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="16dp"
+            android:background="#E6E6E6" />
+
+        <TextView
+            android:id="@+id/tvBottom"
+            android:padding="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_below="@id/view_two"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/textBottom"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:textSize="18dp"/>
+
+
+    </RelativeLayout>
+
+</FrameLayout>

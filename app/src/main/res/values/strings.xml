@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">PGRKAM-App</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="pgrkam">PUNJAB GHAR GHAR ROZGAR AND KAROBAR MISSION</string>
+    <string name="desc_one">You have applied for the following Jobs on www.pgrkam.com in Rozgar Mela - 07.06.2023 Your credentials will be shared with the Employer(s)</string>
+    <string name="desc_two">You may contact the DISTRICT BUREAU OF EMPLOYMENT &amp; ENTERPRISE (DBEE) in case some clarification is required regarding the interviews in the Rozgar Mela - 07.06.2023 </string>
+    <string name="candidate_information">Candidate Information</string>
+    <string name="textBottom">You have not applied for any job in Rozgar Mela - 07.06.2023</string>
 </resources>
