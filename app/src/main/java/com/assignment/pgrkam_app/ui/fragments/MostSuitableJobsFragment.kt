@@ -5,7 +5,10 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
+import com.assignment.pgrkam_app.R
 import com.assignment.pgrkam_app.databinding.FragmentMostSuitableJobsBinding
+
 
 class MostSuitableJobsFragment : Fragment() {
 
@@ -18,5 +21,15 @@ class MostSuitableJobsFragment : Fragment() {
     ): View {
         _binding = FragmentMostSuitableJobsBinding.inflate(inflater, container, false)
         return binding.root
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        binding.radioGroup.setOnCheckedChangeListener { _, checkedId ->
+            when (checkedId) {
+
+            }
+        }
     }
 }
