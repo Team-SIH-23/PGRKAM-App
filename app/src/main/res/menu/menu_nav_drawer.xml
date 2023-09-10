@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single"
+        android:id="@+id/group1" >
+
+        <item
+            android:id="@+id/profile_details"
+            android:checked="false"
+            android:title="Profile Details"
+            />
+
+        <item
+            android:id="@+id/my_job_intrest"
+            android:checked="false"
+            android:title="My Job Intrest"
+            />
+
+        <item
+            android:id ="@+id/search_more_jobs"
+            android:checked="false"
+            android:title="Search More Jobs"/>
+
+        <item
+            android:id="@+id/search_counsellor"
+            android:checked="false"
+            android:title="Search Counsellor"
+            />
+        <item
+            android:id="@+id/self_employment"
+            android:checked="false"
+            android:title="Self Employment"
+            />
+
+        <item
+            android:id="@+id/query"
+            android:checked="false"
+            android:title="Complaints / Query"
+            />
+
+        <item
+            android:id="@+id/foreign_counselling"
+            android:checked="false"
+            android:title="Counselling / Foreign Counselling"
+            />
+
+
+        <item
+            android:id="@+id/local_services"
+            android:checked="false"
+            android:title="Local Services"
+            />
+
+
+        <item
+            android:id="@+id/skill_development"
+            android:checked="false"
+            android:title="Skill Development Opportunities"
+            />
+
+
+        <item
+            android:id="@+id/whats_new"
+            android:checked="false"
+            android:title="What's New"
+            />
+
+    </group>
+</menu>
