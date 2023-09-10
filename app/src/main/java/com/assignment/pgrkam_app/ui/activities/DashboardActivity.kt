@@ -5,6 +5,8 @@ import android.view.MenuItem
 import android.view.View
 import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.view.GravityCompat
+import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
 import com.assignment.pgrkam_app.R
 import com.assignment.pgrkam_app.databinding.ActivityDashboardBinding
@@ -37,34 +39,44 @@ class DashboardActivity : AppCompatActivity(), NavigationView.OnNavigationItemSe
             R.id.profile_details -> {
 
             }
-            R.id.my_job_intrest -> {
 
+            R.id.my_job_intrest -> {
+                findNavController(R.id.nav_host_fragment).navigate(R.id.jobInterestFragment)
             }
+
             R.id.search_more_jobs -> {
 
             }
-            R.id.search_counsellor -> {
 
+            R.id.search_counsellor -> {
+                findNavController(R.id.nav_host_fragment).navigate(R.id.searchCounsellorFragment)
             }
+
             R.id.self_employment -> {
 
             }
-            R.id.query -> {
 
+            R.id.query -> {
+                findNavController(R.id.nav_host_fragment).navigate(R.id.queryFragment)
             }
+
             R.id.foreign_counselling -> {
 
             }
-            R.id.local_services -> {
 
+            R.id.local_services -> {
+                findNavController(R.id.nav_host_fragment).navigate(R.id.localServiceFragment)
             }
+
             R.id.skill_development -> {
 
             }
+
             R.id.whats_new -> {
 
             }
         }
+        binding.drawer.closeDrawer(GravityCompat.START)
         return false
     }
 
