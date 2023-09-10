@@ -6,7 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.assignment.pgrkam_app.databinding.FragmentJobBinding
-import com.assignment.pgrkam_app.ui.adapters.ViewPagerAdapter
+import com.assignment.pgrkam_app.ui.adapter.ViewPagerAdapter
 import com.google.android.material.tabs.TabLayoutMediator
 
 class JobFragment : Fragment() {

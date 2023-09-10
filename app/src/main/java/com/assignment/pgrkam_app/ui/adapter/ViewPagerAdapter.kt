@@ -1,4 +1,4 @@
-package com.assignment.pgrkam_app.ui.adapters
+package com.assignment.pgrkam_app.ui.adapter
 
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
