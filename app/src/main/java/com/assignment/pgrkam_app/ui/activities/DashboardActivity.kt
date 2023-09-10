@@ -34,10 +34,36 @@ class DashboardActivity : AppCompatActivity(), NavigationView.OnNavigationItemSe
 
     override fun onNavigationItemSelected(item: MenuItem): Boolean {
         when (item.itemId) {
+            R.id.profile_details -> {
+
+            }
+            R.id.my_job_intrest -> {
+
+            }
+            R.id.search_more_jobs -> {
+
+            }
+            R.id.search_counsellor -> {
+
+            }
+            R.id.self_employment -> {
+
+            }
+            R.id.query -> {
+
+            }
+            R.id.foreign_counselling -> {
+
+            }
             R.id.local_services -> {
 
             }
+            R.id.skill_development -> {
 
+            }
+            R.id.whats_new -> {
+
+            }
         }
         return false
     }
