@@ -12,7 +12,7 @@
         <item
             android:id="@+id/my_job_intrest"
             android:checked="false"
-            android:title="My Job Intrest"
+            android:title="My Job Interest"
             />
 
         <item

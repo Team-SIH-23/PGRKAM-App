@@ -1,27 +1,78 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.fragments.QueryFragment">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    tools:context=".ui.fragments.SearchCounsellorFragment">
 
-    <androidx.coordinatorlayout.widget.CoordinatorLayout
+    <TextView
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
-        <com.google.android.material.textfield.TextInputLayout
+        android:layout_height="wrap_content"
+        android:text="Type Of Issue"
+        android:textSize="16sp"
+        android:textColor="@color/black"
+        android:layout_margin="16sp"
+        />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/area_of_interest"
+        style="@style/Widget.Material3.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20sp"
+        android:layout_marginEnd="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/textInputLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <com.google.android.material.textfield.MaterialAutoCompleteTextView
+            android:id="@+id/et_type_of_issue"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:background="@drawable/edittext_background"
+            android:hint="Select Issue"
+            android:inputType="none"
+            android:padding="18sp"
+            android:textSize="16sp" />
+    </com.google.android.material.textfield.TextInputLayout>
 
-            <AutoCompleteTextView
-                android:id="@+id/issueTypesField"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="16dp"
-                android:layout_marginRight="16dp"
-                android:padding="16dp"
-                android:hint="Select Issues"
-                android:inputType="none" />
-        </com.google.android.material.textfield.TextInputLayout>
-    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+    <TextView
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Describe Issue"
+        android:textSize="16sp"
+        android:textColor="@color/black"
+        android:layout_margin="16sp"
+        />
 
-</FrameLayout>
+    <EditText
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="20dp"
+        android:id="@+id/enter_issue_description"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter Issue Description"
+        android:background="@drawable/edittext_background"
+        android:padding="30dp"
+        android:inputType="text" />
+
+    <Button
+        android:id="@+id/btn_submit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Submit"
+        android:layout_margin="20sp"
+        style="@style/Widget.Material3.Button.TonalButton"
+        android:background="@drawable/button_gradiant_background"
+        />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        />
+
+</LinearLayout>

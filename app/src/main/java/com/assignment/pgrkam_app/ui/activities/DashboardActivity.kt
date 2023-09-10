@@ -25,7 +25,7 @@ class DashboardActivity : AppCompatActivity(), NavigationView.OnNavigationItemSe
         super.onCreate(savedInstanceState)
         binding = ActivityDashboardBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        setSupportActionBar(binding.toolbarDashboard)
+//        setSupportActionBar(binding.toolbarDashboard)
 
         setupNavigationBar()
 

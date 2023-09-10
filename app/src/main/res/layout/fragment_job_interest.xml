@@ -1,9 +1,130 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.fragments.JobInterestFragment">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    tools:context=".ui.fragments.SearchCounsellorFragment">
 
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Job Sector"
+        android:textSize="16sp"
+        android:textColor="@color/black"
+        android:layout_margin="16sp"
+        />
 
-</FrameLayout>
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/job_sector"
+        style="@style/Widget.Material3.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20sp"
+        android:layout_marginEnd="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/textInputLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <com.google.android.material.textfield.MaterialAutoCompleteTextView
+            android:id="@+id/et_job_sector"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/edittext_background"
+            android:hint="Select Job"
+            android:inputType="none"
+            android:padding="18sp"
+            android:textSize="16sp" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Job Sector Profile/Role"
+        android:textSize="16sp"
+        android:textColor="@color/black"
+        android:layout_margin="16sp"
+        />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/job_sector_profile"
+        style="@style/Widget.Material3.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20sp"
+        android:layout_marginEnd="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/textInputLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <com.google.android.material.textfield.MaterialAutoCompleteTextView
+            android:id="@+id/et_job_sector_profile"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/edittext_background"
+            android:hint="Select Job Profile"
+            android:inputType="none"
+            android:padding="18sp"
+            android:textSize="16sp" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Any other Job Interest"
+        android:textSize="16sp"
+        android:textColor="@color/black"
+        android:layout_margin="16sp"
+        />
+
+    <EditText
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="20dp"
+        android:id="@+id/enter_issue_description"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Any other Job Interest"
+        android:background="@drawable/edittext_background"
+        android:padding="30dp"
+        android:inputType="text" />
+
+    <Button
+        android:id="@+id/btn_add_interest"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Add Interest"
+        android:layout_margin="20sp"
+        style="@style/Widget.Material3.Button.TonalButton"
+        android:background="@drawable/button_gradiant_background"
+        />
+
+    <Button
+        android:id="@+id/btn_add_another_job_interest_top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Add Another Job Interest"
+        android:layout_margin="20sp"
+        style="@style/Widget.Material3.Button.TonalButton"
+        android:background="@drawable/button_gradiant_background"
+        />
+
+    <Button
+        android:id="@+id/btn_add_another_job_interest_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Add Another Job Interest"
+        android:layout_margin="20sp"
+        style="@style/Widget.Material3.Button.TonalButton"
+        android:background="@drawable/button_gradiant_background"
+        />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        />
+
+</LinearLayout>

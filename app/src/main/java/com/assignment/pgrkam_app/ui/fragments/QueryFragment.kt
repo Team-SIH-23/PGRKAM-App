@@ -20,4 +20,18 @@ class QueryFragment : Fragment() {
         _binding = FragmentQueryBinding.inflate(inflater, container, false)
         return binding.root
     }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        val issues = arrayListOf(
+            "Mobile App Related Issues",
+            "DBEE Related Query",
+            "Website Related Query",
+            "Mobile App Related Query",
+            "Other"
+        )
+
+        binding.etTypeOfIssue.setSimpleItems(issues.toTypedArray())
+    }
 }
