@@ -9,5 +9,50 @@
         android:id="@+id/homeFragment"
         android:name="com.assignment.pgrkam_app.ui.fragments.HomeFragment"
         android:label="fragment_home"
-        tools:layout="@layout/fragment_home" />
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_hallTicketFragment"
+            app:destination="@id/hallTicketFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_jobFragment"
+            app:destination="@id/jobFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_skillDevelopmentFragment"
+            app:destination="@id/skillDevelopmentFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/searchCounsellorFragment"
+        android:name="com.assignment.pgrkam_app.ui.fragments.SearchCounsellorFragment"
+        android:label="fragment_search_counsellor"
+        tools:layout="@layout/fragment_search_counsellor" />
+    <fragment
+        android:id="@+id/hallTicketFragment"
+        android:name="com.assignment.pgrkam_app.ui.fragments.HallTicketFragment"
+        android:label="fragment_hall_ticket"
+        tools:layout="@layout/fragment_hall_ticket" />
+    <fragment
+        android:id="@+id/jobInterestFragment"
+        android:name="com.assignment.pgrkam_app.ui.fragments.JobInterestFragment"
+        android:label="fragment_job_interest"
+        tools:layout="@layout/fragment_job_interest" />
+    <fragment
+        android:id="@+id/localServiceFragment"
+        android:name="com.assignment.pgrkam_app.ui.fragments.LocalServiceFragment"
+        android:label="fragment_local_service"
+        tools:layout="@layout/fragment_local_service" />
+    <fragment
+        android:id="@+id/queryFragment"
+        android:name="com.assignment.pgrkam_app.ui.fragments.QueryFragment"
+        android:label="fragment_query"
+        tools:layout="@layout/fragment_query" />
+    <fragment
+        android:id="@+id/jobFragment"
+        android:name="com.assignment.pgrkam_app.ui.fragments.JobFragment"
+        android:label="fragment_job"
+        tools:layout="@layout/fragment_job" />
+    <fragment
+        android:id="@+id/skillDevelopmentFragment"
+        android:name="com.assignment.pgrkam_app.ui.fragments.SkillDevelopmentFragment"
+        android:label="fragment_skill_development"
+        tools:layout="@layout/fragment_skill_development" />
 </navigation>

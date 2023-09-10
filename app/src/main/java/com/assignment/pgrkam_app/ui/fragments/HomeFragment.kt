@@ -5,6 +5,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
+import com.assignment.pgrkam_app.R
 import com.assignment.pgrkam_app.databinding.FragmentHomeBinding
 
 class HomeFragment : Fragment() {
@@ -24,15 +26,15 @@ class HomeFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         binding.cvHallTicket.setOnClickListener {
-
+            findNavController().navigate(R.id.action_homeFragment_to_hallTicketFragment)
         }
 
         binding.cvJobs.setOnClickListener {
-
+            findNavController().navigate(R.id.action_homeFragment_to_jobFragment)
         }
 
         binding.cvSkillDevelopment.setOnClickListener {
-
+            findNavController().navigate(R.id.action_homeFragment_to_skillDevelopmentFragment)
         }
     }
 }
