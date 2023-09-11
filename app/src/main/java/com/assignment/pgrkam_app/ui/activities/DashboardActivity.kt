@@ -1,8 +1,10 @@
 package com.assignment.pgrkam_app.ui.activities
 
+import android.os.Build
 import android.os.Bundle
 import android.view.MenuItem
 import android.view.View
+import androidx.annotation.RequiresApi
 import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.GravityCompat
@@ -21,6 +23,7 @@ class DashboardActivity : AppCompatActivity(), NavigationView.OnNavigationItemSe
     private lateinit var navHeaderBinding: ViewNavDrawerHeaderBinding
     private lateinit var appBarConfiguration: AppBarConfiguration
 
+    @RequiresApi(Build.VERSION_CODES.N)
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityDashboardBinding.inflate(layoutInflater)
@@ -80,8 +83,10 @@ class DashboardActivity : AppCompatActivity(), NavigationView.OnNavigationItemSe
         return false
     }
 
+    @RequiresApi(Build.VERSION_CODES.N)
     private fun setupNavigationBar() {
         navHeaderBinding = ViewNavDrawerHeaderBinding.bind(binding.navigationView.getHeaderView(0))
+        navHeaderBinding.progressProfile.scaleY = 2f
 
 
         binding.navigationView.setNavigationItemSelectedListener(this)
@@ -89,6 +94,15 @@ class DashboardActivity : AppCompatActivity(), NavigationView.OnNavigationItemSe
             this,
             binding.drawer, binding.toolbarDashboard, R.string.app_name, R.string.close_drawer
         ) {
+            override fun onDrawerOpened(drawerView: View) {
+                super.onDrawerOpened(drawerView)
+                navHeaderBinding.progressProfile.setProgress(40, true)
+            }
+
+            override fun onDrawerClosed(drawerView: View) {
+                super.onDrawerClosed(drawerView)
+                navHeaderBinding.progressProfile.setProgress(0, true)
+            }
 
             override fun onDrawerSlide(drawerView: View, slideOffset: Float) {
                 if (slideOffset != 0f) super.onDrawerSlide(drawerView, slideOffset)
