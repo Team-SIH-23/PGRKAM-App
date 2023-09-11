@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -7,178 +7,190 @@
     tools:context=".ui.fragments.LocalServiceFragment"
     android:orientation="vertical">
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Type Of Service"
-        android:textSize="16sp"
-        android:textColor="@color/black"
-        android:layout_margin="10sp"
-        />
+   <LinearLayout
+       android:layout_width="match_parent"
+       android:layout_height="match_parent"
+       android:orientation="vertical">
 
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/type_of_service"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="20sp"
-        android:layout_marginEnd="20sp"
-        app:layout_constraintBottom_toTopOf="@+id/textInputLayout"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent">
+       <TextView
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:text="Type Of Service"
+           android:textSize="16sp"
+           android:textColor="@color/black"
+           android:layout_margin="10sp"
+           />
 
-        <com.google.android.material.textfield.MaterialAutoCompleteTextView
-            android:id="@+id/et_type_of_service"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@drawable/edittext_background"
-            android:hint="Type A, B, C etc"
-            android:inputType="none"
-            android:padding="18sp"
-            android:textSize="16sp" />
-    </com.google.android.material.textfield.TextInputLayout>
+       <com.google.android.material.textfield.TextInputLayout
+           android:id="@+id/type_of_service"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:layout_marginStart="20sp"
+           android:layout_marginEnd="20sp"
+           app:layout_constraintBottom_toTopOf="@+id/textInputLayout"
+           app:layout_constraintEnd_toEndOf="parent"
+           app:layout_constraintStart_toStartOf="parent">
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="District"
-        android:textSize="16sp"
-        android:textColor="@color/black"
-        android:layout_margin="10sp"
-        />
+           <com.google.android.material.textfield.MaterialAutoCompleteTextView
+               android:id="@+id/et_type_of_service"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:background="@drawable/edittext_background"
+               android:hint="Type A, B, C etc"
+               android:inputType="none"
+               android:padding="18sp"
+               android:textSize="16sp" />
+       </com.google.android.material.textfield.TextInputLayout>
 
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/district"
-        style="@style/Widget.Material3.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="20sp"
-        android:layout_marginEnd="20sp"
-        app:layout_constraintBottom_toTopOf="@+id/textInputLayout"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent">
+       <TextView
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:text="District"
+           android:textSize="16sp"
+           android:textColor="@color/black"
+           android:layout_margin="10sp"
+           />
 
-        <com.google.android.material.textfield.MaterialAutoCompleteTextView
-            android:id="@+id/et_district"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@drawable/edittext_background"
-            android:hint="Select District"
-            android:inputType="none"
-            android:padding="18sp"
-            android:textSize="16sp" />
-    </com.google.android.material.textfield.TextInputLayout>
+       <com.google.android.material.textfield.TextInputLayout
+           android:id="@+id/district"
+           style="@style/Widget.Material3.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:layout_marginStart="20sp"
+           android:layout_marginEnd="20sp"
+           app:layout_constraintBottom_toTopOf="@+id/textInputLayout"
+           app:layout_constraintEnd_toEndOf="parent"
+           app:layout_constraintStart_toStartOf="parent">
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Sub District"
-        android:textSize="16sp"
-        android:textColor="@color/black"
-        android:layout_margin="10sp"
-        />
+           <com.google.android.material.textfield.MaterialAutoCompleteTextView
+               android:id="@+id/et_district"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:background="@drawable/edittext_background"
+               android:hint="Select District"
+               android:inputType="none"
+               android:padding="18sp"
+               android:textSize="16sp" />
+       </com.google.android.material.textfield.TextInputLayout>
 
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/sub_district"
-        style="@style/Widget.Material3.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="20sp"
-        android:layout_marginEnd="20sp"
-        app:layout_constraintBottom_toTopOf="@+id/textInputLayout"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent">
+       <TextView
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:text="Sub District"
+           android:textSize="16sp"
+           android:textColor="@color/black"
+           android:layout_margin="10sp"
+           />
 
-        <com.google.android.material.textfield.MaterialAutoCompleteTextView
-            android:id="@+id/et_sub_district"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@drawable/edittext_background"
-            android:hint="Select Sub District"
-            android:inputType="none"
-            android:padding="18sp"
-            android:textSize="16sp" />
-    </com.google.android.material.textfield.TextInputLayout>
+       <com.google.android.material.textfield.TextInputLayout
+           android:id="@+id/sub_district"
+           style="@style/Widget.Material3.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:layout_marginStart="20sp"
+           android:layout_marginEnd="20sp"
+           app:layout_constraintBottom_toTopOf="@+id/textInputLayout"
+           app:layout_constraintEnd_toEndOf="parent"
+           app:layout_constraintStart_toStartOf="parent">
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Select City/Village"
-        android:textSize="16sp"
-        android:textColor="@color/black"
-        android:layout_margin="10sp"
-        />
+           <com.google.android.material.textfield.MaterialAutoCompleteTextView
+               android:id="@+id/et_sub_district"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:background="@drawable/edittext_background"
+               android:hint="Select Sub District"
+               android:inputType="none"
+               android:padding="18sp"
+               android:textSize="16sp" />
+       </com.google.android.material.textfield.TextInputLayout>
 
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/select_city_village"
-        style="@style/Widget.Material3.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="20sp"
-        android:layout_marginEnd="20sp"
-        app:layout_constraintBottom_toTopOf="@+id/textInputLayout"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent">
+       <TextView
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:text="Select City/Village"
+           android:textSize="16sp"
+           android:textColor="@color/black"
+           android:layout_margin="10sp"
+           />
 
-        <com.google.android.material.textfield.MaterialAutoCompleteTextView
-            android:id="@+id/et_select_city_village"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@drawable/edittext_background"
-            android:hint="Select City/Village"
-            android:inputType="none"
-            android:padding="18sp"
-            android:textSize="16sp" />
-    </com.google.android.material.textfield.TextInputLayout>
-    
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
+       <com.google.android.material.textfield.TextInputLayout
+           android:id="@+id/select_city_village"
+           style="@style/Widget.Material3.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:layout_marginStart="20sp"
+           android:layout_marginEnd="20sp"
+           app:layout_constraintBottom_toTopOf="@+id/textInputLayout"
+           app:layout_constraintEnd_toEndOf="parent"
+           app:layout_constraintStart_toStartOf="parent">
 
+           <com.google.android.material.textfield.MaterialAutoCompleteTextView
+               android:id="@+id/et_select_city_village"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:background="@drawable/edittext_background"
+               android:hint="Select City/Village"
+               android:inputType="none"
+               android:padding="18sp"
+               android:textSize="16sp" />
+       </com.google.android.material.textfield.TextInputLayout>
 
-    </LinearLayout>
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Near By"
-        android:textSize="16sp"
-        android:textColor="@color/black"
-        android:layout_margin="10sp"
-        />
-
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/near_by"
-        style="@style/Widget.Material3.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="20sp"
-        android:layout_marginEnd="20sp"
-        app:layout_constraintBottom_toTopOf="@+id/textInputLayout"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent">
-
-        <com.google.android.material.textfield.MaterialAutoCompleteTextView
-            android:id="@+id/et_near_by"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@drawable/edittext_background"
-            android:hint="Select Area"
-            android:inputType="none"
-            android:padding="18sp"
-            android:textSize="16sp" />
-    </com.google.android.material.textfield.TextInputLayout>
-
-    <Button
-        android:id="@+id/btn_submit"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Search"
-        android:layout_margin="20sp"
-        style="@style/Widget.Material3.Button.TonalButton"
-        android:background="@drawable/button_gradiant_background"
-        />
+       <LinearLayout
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:orientation="horizontal">
 
 
+       </LinearLayout>
 
-</LinearLayout>
+       <TextView
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:text="Near By"
+           android:textSize="16sp"
+           android:textColor="@color/black"
+           android:layout_margin="10sp"
+           />
+
+       <com.google.android.material.textfield.TextInputLayout
+           android:id="@+id/near_by"
+           style="@style/Widget.Material3.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:layout_marginStart="20sp"
+           android:layout_marginEnd="20sp"
+           app:layout_constraintBottom_toTopOf="@+id/textInputLayout"
+           app:layout_constraintEnd_toEndOf="parent"
+           app:layout_constraintStart_toStartOf="parent">
+
+           <com.google.android.material.textfield.MaterialAutoCompleteTextView
+               android:id="@+id/et_near_by"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:background="@drawable/edittext_background"
+               android:hint="Select Area"
+               android:inputType="none"
+               android:padding="18sp"
+               android:textSize="16sp" />
+       </com.google.android.material.textfield.TextInputLayout>
+
+       <Button
+           android:id="@+id/btn_submit"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:text="Search"
+           android:layout_margin="20sp"
+           style="@style/Widget.Material3.Button.TonalButton"
+           android:background="@drawable/button_gradiant_background"
+           />
+
+       <androidx.recyclerview.widget.RecyclerView
+           android:id="@+id/rvLocalServices"
+           android:layout_width="match_parent"
+           android:layout_height="match_parent"/>
+
+
+   </LinearLayout>
+
+
+</androidx.core.widget.NestedScrollView>

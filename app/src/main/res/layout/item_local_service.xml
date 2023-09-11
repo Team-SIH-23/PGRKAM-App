@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_margin="10dp"
+    app:cardElevation="10dp">
+
+   <RelativeLayout
+       android:id="@+id/rlBody"
+       android:layout_width="match_parent"
+       android:layout_height="match_parent">
+
+
+       <de.hdodenhof.circleimageview.CircleImageView
+           android:id="@+id/circularIv"
+           android:src="@drawable/ic_launcher_foreground"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content">
+       </de.hdodenhof.circleimageview.CircleImageView>
+
+       <LinearLayout
+           android:id="@+id/llBody"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_centerInParent="true"
+           android:layout_marginStart="16dp"
+           android:layout_marginTop="16dp"
+           android:layout_marginEnd="16dp"
+           android:layout_marginBottom="16dp"
+           android:layout_toRightOf="@id/circularIv"
+           android:orientation="vertical">
+
+           <TextView
+               android:id="@+id/org_name"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:text="Jatinder Kumar Kumar"
+               android:textSize="20sp" />
+
+           <TextView
+               android:id="@+id/service_name"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_marginTop="16dp"
+               android:text="Service Name: Ironing"
+               android:textColor="@color/black"
+               android:textSize="15sp" />
+
+       </LinearLayout>
+       <LinearLayout
+           android:layout_marginTop="16dp"
+           android:layout_below="@id/llBody"
+           android:orientation="horizontal"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content">
+
+           <TextView
+               android:textAlignment="center"
+               android:id="@+id/contact"
+               android:layout_marginTop="16dp"
+               android:layout_width="0dp"
+               android:layout_weight="1"
+               android:text="CONTACT"
+               android:background="@drawable/edittext_background"
+               android:layout_marginRight="16dp"
+               android:textColor="@color/black"
+               android:textSize="24sp"
+               android:layout_height="wrap_content"/>
+
+           <TextView
+               android:textAlignment="center"
+               android:id="@+id/feedback"
+               android:layout_marginTop="16dp"
+               android:layout_width="0dp"
+               android:layout_weight="1"
+               android:text="FEEDBACK"
+               android:textColor="@color/black"
+               android:textSize="24sp"
+               android:layout_height="wrap_content"/>
+       </LinearLayout>
+
+
+
+
+   </RelativeLayout>
+
+</androidx.cardview.widget.CardView>
