@@ -1,6 +1,7 @@
 package com.assignment.pgrkam_app.di
 
 import com.assignment.pgrkam_app.api.RetrofitService
+import com.assignment.pgrkam_app.repository.DistrictRepository
 import com.assignment.pgrkam_app.repository.GovtJobsRepository
 import dagger.Module
 import dagger.Provides
@@ -15,6 +16,11 @@ class RepositoryModule {
     @Provides
     fun providesGovtJobsRepository(retrofitService: RetrofitService): GovtJobsRepository {
         return GovtJobsRepository(retrofitService)
+    }
+
+    @Provides
+    fun providesDistrictRepository(retrofitService: RetrofitService): DistrictRepository {
+        return DistrictRepository(retrofitService)
     }
 
 }
