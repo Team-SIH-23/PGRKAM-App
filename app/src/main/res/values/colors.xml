@@ -9,6 +9,7 @@
     <color name="white">#FFFFFFFF</color>
 
     <color name="app_dark">#f27437</color>
-    <color name="app_light">#fad5c3</color>
+    <color name="app_light">#fddbbf</color>
+    <color name="app_blue">#b1e2f9</color>
 
 </resources>

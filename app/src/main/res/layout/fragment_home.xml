@@ -10,39 +10,61 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        >
+        android:orientation="horizontal">
+
         <com.google.android.material.card.MaterialCardView
             android:id="@+id/cv_hall_ticket"
             android:layout_width="0sp"
-            android:layout_weight="1"
             android:layout_height="wrap_content"
-            android:layout_margin="8dp"
-            app:cardBackgroundColor="@color/white">
+            android:layout_margin="10sp"
+            app:cardPreventCornerOverlap="false"
+            app:strokeColor="@android:color/transparent"
+            android:layout_weight="1"
+            android:backgroundTint="@color/app_blue"
+            app:cardBackgroundColor="@color/white"
+            app:shapeAppearance="@style/ShapeAppearanceOverlay.MaterialCardView.Cut">
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
 
-                <ImageView
-                    android:id="@+id/iv_identity"
-                    android:layout_width="100sp"
-                    android:layout_height="100sp"
-                    android:padding="10sp"
-                    android:src="@drawable/identity_card"
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/inside_hall_ticket"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="#cde6ff"
+                    app:cardBackgroundColor="@color/white"
+                    app:strokeColor="@android:color/transparent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:shapeAppearance="@style/ShapeAppearanceOverlay.MaterialCardView.Cut">
+
+                    <ImageView
+                        android:id="@+id/iv_identity"
+                        android:layout_width="90sp"
+                        android:layout_height="90sp"
+                        android:padding="10sp"
+                        android:src="@drawable/hall_ticket_image"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                </com.google.android.material.card.MaterialCardView>
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_margin="10sp"
-                    android:text="Hall Ticket for Rozgar\n Mela - 07.06.2023"
+                    android:layout_marginStart="10sp"
+                    android:layout_marginTop="30sp"
+                    android:layout_marginEnd="10sp"
+                    android:layout_marginBottom="30sp"
                     android:minLines="2"
+                    android:textStyle="bold"
+                    android:text="Hall Ticket for Rozgar\nMela - 07.06.2023"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
+                    android:textColor="@color/black"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/iv_identity" />
+                    app:layout_constraintTop_toBottomOf="@+id/inside_hall_ticket" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -51,35 +73,55 @@
         <com.google.android.material.card.MaterialCardView
             android:id="@+id/cv_jobs"
             android:layout_width="0sp"
-            android:layout_weight="1"
             android:layout_height="wrap_content"
-            android:layout_margin="8dp"
-            app:cardBackgroundColor="@color/white">
+            android:layout_margin="10sp"
+            android:layout_weight="1"
+            android:backgroundTint="@color/app_light"
+            app:cardBackgroundColor="@color/white"
+            app:cardPreventCornerOverlap="false"
+            app:strokeColor="@android:color/transparent"
+            app:shapeAppearance="@style/ShapeAppearanceOverlay.MaterialCardView.Cut">
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
 
-                <ImageView
-                    android:id="@+id/iv_jobs"
-                    android:layout_width="100sp"
-                    android:layout_height="100sp"
-                    android:padding="10sp"
-                    android:src="@drawable/identity_card"
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/inside_cv_job"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="#ffebd2"
+                    app:cardBackgroundColor="@color/white"
+                    app:strokeColor="@android:color/transparent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:shapeAppearance="@style/ShapeAppearanceOverlay.MaterialCardView.Cut">
+
+
+                    <ImageView
+                        android:layout_width="90sp"
+                        android:layout_height="90sp"
+                        android:padding="10sp"
+                        android:src="@drawable/search_job_image" />
+
+                </com.google.android.material.card.MaterialCardView>
+
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="20sp"
-                    android:layout_margin="10sp"
-                    android:text="Jobs"
+                    android:layout_marginStart="10sp"
+                    android:layout_marginTop="30sp"
+                    android:layout_marginEnd="10sp"
+                    android:layout_marginBottom="30sp"
                     android:minLines="2"
+                    android:textStyle="bold"
+                    android:text="Jobs"
+                    android:textColor="@color/black"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/iv_jobs" />
+                    app:layout_constraintTop_toBottomOf="@+id/inside_cv_job" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -90,51 +132,76 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        >
+        android:orientation="horizontal">
+
         <com.google.android.material.card.MaterialCardView
             android:id="@+id/cv_skill_development"
             android:layout_width="0sp"
-            android:layout_weight="1"
             android:layout_height="wrap_content"
             android:layout_margin="8dp"
-            app:cardBackgroundColor="@color/white">
+            android:layout_weight="1"
+            app:cardPreventCornerOverlap="false"
+            app:strokeColor="@android:color/transparent"
+            android:backgroundTint="@color/app_light"
+            app:cardBackgroundColor="@color/white"
+            app:shapeAppearance="@style/ShapeAppearanceOverlay.MaterialCardView.Cut">
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
 
-                <ImageView
-                    android:id="@+id/iv_skill"
-                    android:layout_width="100sp"
-                    android:layout_height="100sp"
-                    android:padding="10sp"
-                    android:src="@drawable/identity_card"
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/inside_skill_job"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="#ffebd2"
+                    app:cardBackgroundColor="@color/white"
+                    app:strokeColor="@android:color/transparent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:shapeAppearance="@style/ShapeAppearanceOverlay.MaterialCardView.Cut">
+
+                    <ImageView
+                        android:id="@+id/iv_skill"
+                        android:layout_width="90sp"
+                        android:layout_height="90sp"
+                        android:padding="10sp"
+                        android:src="@drawable/skill_image"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                </com.google.android.material.card.MaterialCardView>
+
+
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_margin="10sp"
-                    android:text="Skill Development\nOpportunities"
+                    android:layout_marginStart="10sp"
+                    android:layout_marginTop="30sp"
+                    android:layout_marginEnd="10sp"
+                    android:textColor="@color/black"
+                    android:layout_marginBottom="30sp"
                     android:minLines="2"
+                    android:textStyle="bold"
+                    android:text="Skill Development\nOpportunities"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/iv_skill" />
+                    app:layout_constraintTop_toBottomOf="@+id/inside_skill_job" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 
         </com.google.android.material.card.MaterialCardView>
 
         <com.google.android.material.card.MaterialCardView
-            android:visibility="invisible"
             android:layout_width="0sp"
-            android:layout_weight="1"
             android:layout_height="wrap_content"
             android:layout_margin="8dp"
-            app:cardBackgroundColor="@color/white">
+            android:layout_weight="1"
+            android:visibility="invisible"
+            app:cardBackgroundColor="@color/white"
+            app:shapeAppearance="@style/ShapeAppearanceOverlay.MaterialCardView.Cut">
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
@@ -152,10 +219,12 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="20sp"
-                    android:layout_margin="10sp"
-                    android:text="Jobs"
+                    android:layout_marginStart="10sp"
+                    android:layout_marginTop="30sp"
+                    android:layout_marginEnd="10sp"
+                    android:layout_marginBottom="30sp"
                     android:minLines="2"
+                    android:text="Jobs"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
