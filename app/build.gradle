@@ -72,11 +72,14 @@ dependencies {
     implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:2.6.2"
     implementation "androidx.lifecycle:lifecycle-runtime-ktx:2.6.2"
 
-    //circular image
+    // Circular image
     implementation 'de.hdodenhof:circleimageview:3.1.0'
 
     // Navigation Components
     implementation "androidx.navigation:navigation-fragment-ktx:2.7.2"
     implementation "androidx.navigation:navigation-ui-ktx:2.7.2"
+
+    // PostHog
+    implementation 'com.posthog.android:posthog:2.0.0'
 
 }
