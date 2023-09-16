@@ -30,21 +30,21 @@ class HomeFragment : Fragment() {
         binding.cvHallTicket.setOnClickListener {
             val eventProperties = Properties()
                 .putValue("Button Clicked", "Hall Ticket")
-            PostHog.with(requireContext()).capture("Button Clicked", eventProperties)
+            PostHog.with(requireContext()).capture("Hall Ticket", eventProperties)
             findNavController().navigate(R.id.action_homeFragment_to_hallTicketFragment)
         }
 
         binding.cvJobs.setOnClickListener {
             val eventProperties = Properties()
                 .putValue("Button Clicked", "Jobs")
-            PostHog.with(requireContext()).capture("Button Clicked", eventProperties)
+            PostHog.with(requireContext()).capture("Job", eventProperties)
             findNavController().navigate(R.id.action_homeFragment_to_jobFragment)
         }
 
         binding.cvSkillDevelopment.setOnClickListener {
             val eventProperties = Properties()
                 .putValue("Button Clicked", "Skill Development")
-            PostHog.with(requireContext()).capture("Button Clicked", eventProperties)
+            PostHog.with(requireContext()).capture("Skill development", eventProperties)
             findNavController().navigate(R.id.action_homeFragment_to_skillDevelopmentFragment)
         }
     }

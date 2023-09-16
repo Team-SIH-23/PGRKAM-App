@@ -11,7 +11,7 @@ class PgrkamApplication : Application() {
     override fun onCreate() {
         super.onCreate()
         val posthog =
-            PostHog.Builder(this, "phx_mNTyr58SbJPVvEl0Yk79lM3zMFKEA0cNoHDYrWzoqpw")
+            PostHog.Builder(this, "phc_O4twmKgiDmct6WN5bXI7LuOvYMj54XTlXpwRQnali2V","https://app.posthog.com")
                 .captureApplicationLifecycleEvents()
                 .recordScreenViews()
                 .build()

@@ -180,7 +180,8 @@
            android:layout_height="wrap_content"
            android:text="Search"
            android:layout_margin="20sp"
-           style="@style/Widget.Material3.Button.TonalButton"
+           app:backgroundTint="@null"
+           style="@style/Widget.Material3.Button"
            android:background="@drawable/button_gradiant_background"
            />
 

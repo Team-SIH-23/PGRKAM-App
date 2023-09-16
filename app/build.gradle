@@ -80,6 +80,6 @@ dependencies {
     implementation "androidx.navigation:navigation-ui-ktx:2.7.2"
 
     // PostHog
-    implementation 'com.posthog.android:posthog:2.0.0'
+    implementation 'com.posthog.android:posthog:2.0.3'
 
 }
