@@ -9,16 +9,13 @@ import com.assignment.pgrkam_app.models.GovtJobs
 import dagger.hilt.android.qualifiers.ApplicationContext
 import javax.inject.Inject
 
-class MostSuitableJobsAdapter @Inject constructor(@ApplicationContext val context: Context) :
-    RecyclerView.Adapter<MostSuitableJobsAdapter.MostSuitableJobsViewHolder>() {
-
-    private var govtJobs = ArrayList<GovtJobs>()
+class MostSuitableJobsAdapter(private val govtJobs : List<GovtJobs>) : RecyclerView.Adapter<MostSuitableJobsAdapter.MostSuitableJobsViewHolder>() {
 
     inner class MostSuitableJobsViewHolder(private val binding: ItemMostSuitableJobsListBinding) :
         RecyclerView.ViewHolder(binding.root) {
 
         fun bind(govtJobs: GovtJobs) {
-
+            binding.tvJobs.text = govtJobs.job_title
         }
 
     }
