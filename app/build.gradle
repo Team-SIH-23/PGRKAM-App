@@ -82,4 +82,5 @@ dependencies {
     // PostHog
     implementation 'com.posthog.android:posthog:2.0.3'
 
+    implementation 'pl.droidsonroids.gif:android-gif-drawable:1.2.22'
 }

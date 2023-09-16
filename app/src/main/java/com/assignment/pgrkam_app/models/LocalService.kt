@@ -15,4 +15,6 @@ data class LocalService(
     val service_start_time: String?,
     val services_name: String,
     val rating: Int
-)
+) {
+    val image =  "https://pgrkamadmin.pgrkam.com/"
+}

@@ -74,14 +74,5 @@ class MostSuitableJobsFragment : Fragment() {
             }
         }
 
-//        binding.button.setOnClickListener {
-//            Toast.makeText(requireContext(),"Pro",Toast.LENGTH_LONG).show()
-//        }
-//
-//        binding.button2.setOnClickListener {
-//            adapter = MostSuitableJobsAdapter(govList)
-//            binding.rvMostjob.adapter = adapter
-//            binding.rvMostjob.layoutManager =LinearLayoutManager(requireContext())
-//        }
     }
 }

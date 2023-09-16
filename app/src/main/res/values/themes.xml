@@ -17,6 +17,12 @@
     </style>
 
 
+    <style name="splash_screen" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="android:statusBarColor">#fdfdfd</item>
+        <item name="android:windowLightStatusBar">true</item>
+    </style>
+
+
     <style name="MyCardView" parent="@style/Widget.MaterialComponents.CardView">
         <item name="shapeAppearanceOverlay">@style/ShapeAppearanceOverlay.MaterialCardView.Cut</item>
     </style>

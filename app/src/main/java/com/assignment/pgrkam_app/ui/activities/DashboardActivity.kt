@@ -1,5 +1,7 @@
 package com.assignment.pgrkam_app.ui.activities
 
+import android.content.Intent
+import android.net.Uri
 import android.os.Build
 import android.os.Bundle
 import android.view.MenuItem
@@ -72,11 +74,13 @@ class DashboardActivity : AppCompatActivity(), NavigationView.OnNavigationItemSe
             }
 
             R.id.skill_development -> {
-
+                val uri = Uri.parse("https://www.psdm.gov.in/")
+                startActivity(Intent(Intent.ACTION_VIEW, uri))
             }
 
             R.id.whats_new -> {
-
+                val uri = Uri.parse("https://www.pgrkam.com/")
+                startActivity(Intent(Intent.ACTION_VIEW, uri))
             }
         }
         binding.drawer.closeDrawer(GravityCompat.START)

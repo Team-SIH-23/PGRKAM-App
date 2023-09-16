@@ -16,14 +16,18 @@
         android:theme="@style/Theme.PGRKAMApp"
         tools:targetApi="31">
         <activity
-            android:name=".ui.activities.DashboardActivity"
-            android:exported="true">
+            android:name=".ui.activities.SplashScreenActivity"
+            android:exported="true"
+            android:theme="@style/splash_screen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".ui.activities.DashboardActivity"
+            android:exported="false"/>
         <activity
             android:name=".ui.activities.MainActivity"
             android:exported="false"/>
