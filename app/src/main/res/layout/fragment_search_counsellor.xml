@@ -44,8 +44,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Search"
+        app:backgroundTint="@null"
+        style="@style/Widget.Material3.Button"
         android:layout_margin="20sp"
-        style="@style/Widget.Material3.Button.TonalButton"
         android:background="@drawable/button_gradiant_background"
         />
 
