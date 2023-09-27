@@ -1,6 +1,7 @@
 package com.assignment.pgrkam_app.ui.fragments
 
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -47,6 +48,7 @@ class LocalServiceFragment : Fragment() {
             layoutManager = LinearLayoutManager(context, LinearLayoutManager.VERTICAL, false)
             adapter = localServiceAdapter
         }
+
         return binding.root
     }
 
@@ -88,6 +90,7 @@ class LocalServiceFragment : Fragment() {
                         }
                         is LocalServiceUiState.LocalServiceList -> {
                             localServiceAdapter.setUpPinnedRepoList(it.list)
+                            Log.d("LOCAL_SERVICES",it.list.toString())
                         }
                     }
                 }

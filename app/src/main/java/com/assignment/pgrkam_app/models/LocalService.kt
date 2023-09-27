@@ -16,5 +16,7 @@ data class LocalService(
     val services_name: String,
     val rating: Int
 ) {
-    val image =  "https://pgrkamadmin.pgrkam.com/"
+    companion object {
+        val image =  "https://pgrkamadmin.pgrkam.com/"
+    }
 }

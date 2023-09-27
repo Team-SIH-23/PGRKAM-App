@@ -1,11 +1,13 @@
 package com.assignment.pgrkam_app.ui.adapter
 
 import android.content.Context
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.assignment.pgrkam_app.databinding.ItemLocalServiceBinding
 import com.assignment.pgrkam_app.models.LocalService
+import com.assignment.pgrkam_app.models.LocalService.Companion.image
 import com.assignment.pgrkam_app.utils.GlideLoader
 import dagger.hilt.android.qualifiers.ApplicationContext
 import javax.inject.Inject
@@ -20,10 +22,17 @@ class LocalServiceAdapter @Inject constructor(
         RecyclerView.ViewHolder(binding.root) {
 
         fun bind(localService: LocalService) {
-            binding.serviceName.text = "Service Name: "+ localService.services_name
+            binding.serviceName.text = "Service Name: " + localService.services_name
             binding.orgName.text = localService.org_name
             val glideLoader = GlideLoader(context)
-            localService.profile_image?.let { glideLoader.loadImage(it, binding.circularIv) }
+            if (localService.profile_image != null) {
+                glideLoader.loadImage(
+                    image + localService.profile_image,
+                    binding.circularIv
+                )
+            }
+
+            Log.d("@@@@@", image + localService.profile_image)
         }
 
     }
