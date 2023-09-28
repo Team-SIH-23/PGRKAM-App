@@ -1,5 +1,6 @@
 package com.assignment.pgrkam_app.ui.fragments
 
+import android.annotation.SuppressLint
 import android.os.Bundle
 import android.util.Log
 import android.view.LayoutInflater
@@ -17,8 +18,10 @@ import com.assignment.pgrkam_app.R
 import com.assignment.pgrkam_app.databinding.FragmentMostSuitableJobsBinding
 import com.assignment.pgrkam_app.models.GovtJobs
 import com.assignment.pgrkam_app.ui.adapter.MostSuitableJobsAdapter
+import com.assignment.pgrkam_app.ui.adapter.RecommendationAdapter
 import com.assignment.pgrkam_app.utils.GovtJobsUiState
 import com.assignment.pgrkam_app.viewmodels.GovtJobsViewModel
+import com.assignment.pgrkam_app.viewmodels.RecommendationViewModel
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.launch
 
@@ -30,7 +33,9 @@ class MostSuitableJobsFragment : Fragment() {
     private val binding get() = _binding!!
 
     private lateinit var adapter: MostSuitableJobsAdapter
+    private lateinit var recommendationAdapter: RecommendationAdapter
     private lateinit var viewModel: GovtJobsViewModel
+    private lateinit var recommendationViewModel: RecommendationViewModel
     private lateinit var govList : List<GovtJobs>
 
     override fun onCreateView(
@@ -39,6 +44,12 @@ class MostSuitableJobsFragment : Fragment() {
     ): View {
         _binding = FragmentMostSuitableJobsBinding.inflate(inflater, container, false)
         viewModel = ViewModelProvider(this)[GovtJobsViewModel::class.java]
+        recommendationViewModel = ViewModelProvider(this)[RecommendationViewModel::class.java]
+        recommendationAdapter = RecommendationAdapter()
+        binding.rvRecommended.apply {
+            layoutManager = LinearLayoutManager(context, LinearLayoutManager.VERTICAL, false)
+            adapter = recommendationAdapter
+        }
         viewModel.getGovtJobs()
         lifecycleScope.launch  {
                 viewModel.govtJobsUiState.collect {
@@ -58,18 +69,41 @@ class MostSuitableJobsFragment : Fragment() {
         return binding.root
     }
 
+    @SuppressLint("UnsafeRepeatOnLifecycleDetector")
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        binding.radioGroup.setOnCheckedChangeListener { _, checkedId ->
-            when (checkedId) {
-                R.id.radioPrivate -> {
-                    Toast.makeText(requireContext(),"Pro",Toast.LENGTH_LONG).show()
+        binding.toggleButton.addOnButtonCheckedListener { toggleButton, checkedId, isChecked ->
+            when(checkedId) {
+                R.id.button1 -> {
+                    binding.rvGovernment.visibility = View.GONE
+                    binding.rvPrivate.visibility = View.GONE
+                    binding.rvRecommended.visibility = View.VISIBLE
                 }
-                R.id.radioGovt -> {
+                R.id.button2 -> {
+                    binding.rvGovernment.visibility = View.GONE
+                    binding.rvPrivate.visibility = View.VISIBLE
+                    binding.rvRecommended.visibility = View.GONE
+                    Toast.makeText(requireContext(),"Private",Toast.LENGTH_LONG).show()
+
+                }
+                R.id.button3 -> {
+                    binding.rvGovernment.visibility = View.VISIBLE
+                    binding.rvPrivate.visibility = View.GONE
+                    binding.rvRecommended.visibility = View.GONE
                     adapter = MostSuitableJobsAdapter(govList)
-                    binding.rvMostjob.adapter = adapter
-                    binding.rvMostjob.layoutManager =LinearLayoutManager(requireContext())
+                    binding.rvGovernment.adapter = adapter
+                    binding.rvGovernment.layoutManager =LinearLayoutManager(requireContext())
+                }
+            }
+        }
+
+
+        recommendationViewModel.getRecommendedJobs()
+        lifecycleScope.launch {
+            repeatOnLifecycle(Lifecycle.State.STARTED) {
+                recommendationViewModel.recommendationUiState.collect {
+                    recommendationAdapter.setRecommendationResponseItemList(it)
                 }
             }
         }
