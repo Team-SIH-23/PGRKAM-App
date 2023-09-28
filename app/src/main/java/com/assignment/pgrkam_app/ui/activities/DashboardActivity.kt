@@ -16,6 +16,8 @@ import com.assignment.pgrkam_app.R
 import com.assignment.pgrkam_app.databinding.ActivityDashboardBinding
 import com.assignment.pgrkam_app.databinding.ViewNavDrawerHeaderBinding
 import com.google.android.material.navigation.NavigationView
+import com.posthog.android.PostHog
+import com.posthog.android.Properties
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
@@ -46,6 +48,9 @@ class DashboardActivity : AppCompatActivity(), NavigationView.OnNavigationItemSe
             }
 
             R.id.my_job_intrest -> {
+                val eventProperties = Properties()
+                    .putValue("Button Clicked", "Job Interest")
+                PostHog.with(this).capture("Job Interest", eventProperties)
                 findNavController(R.id.nav_host_fragment).navigate(R.id.jobInterestFragment)
             }
 
@@ -54,6 +59,9 @@ class DashboardActivity : AppCompatActivity(), NavigationView.OnNavigationItemSe
             }
 
             R.id.search_counsellor -> {
+                val eventProperties = Properties()
+                    .putValue("Button Clicked", "Search Counsellor")
+                PostHog.with(this).capture("Search Counsellor", eventProperties)
                 findNavController(R.id.nav_host_fragment).navigate(R.id.searchCounsellorFragment)
             }
 
@@ -62,23 +70,38 @@ class DashboardActivity : AppCompatActivity(), NavigationView.OnNavigationItemSe
             }
 
             R.id.query -> {
+                val eventProperties = Properties()
+                    .putValue("Button Clicked", "Query")
+                PostHog.with(this).capture("Query", eventProperties)
                 findNavController(R.id.nav_host_fragment).navigate(R.id.queryFragment)
             }
 
             R.id.foreign_counselling -> {
+                val eventProperties = Properties()
+                    .putValue("Button Clicked", "Foreign Counselling")
+                PostHog.with(this).capture("Foreign Counselling", eventProperties)
                 findNavController(R.id.nav_host_fragment).navigate(R.id.counsellingFragment)
             }
 
             R.id.local_services -> {
+                val eventProperties = Properties()
+                    .putValue("Button Clicked", "Local Services")
+                PostHog.with(this).capture("Local Services", eventProperties)
                 findNavController(R.id.nav_host_fragment).navigate(R.id.localServiceFragment)
             }
 
             R.id.skill_development -> {
+                val eventProperties = Properties()
+                    .putValue("Button Clicked", "Skill Development")
+                PostHog.with(this).capture("Skill Development", eventProperties)
                 val uri = Uri.parse("https://www.psdm.gov.in/")
                 startActivity(Intent(Intent.ACTION_VIEW, uri))
             }
 
             R.id.whats_new -> {
+                val eventProperties = Properties()
+                    .putValue("Button Clicked", "Whats New")
+                PostHog.with(this).capture("Whats New", eventProperties)
                 val uri = Uri.parse("https://www.pgrkam.com/")
                 startActivity(Intent(Intent.ACTION_VIEW, uri))
             }
