@@ -15,11 +15,11 @@ class RecommendationAdapter :
         RecyclerView.ViewHolder(binding.root) {
 
         fun bind(recommendationResponseItem: RecommendationResponseItem) {
-            binding.companyName.text = recommendationResponseItem.company_name
-            binding.govtPvt.text = recommendationResponseItem.govt
-            binding.jobTitle.text = recommendationResponseItem.job_title
-            binding.experience.text = recommendationResponseItem.experience
-            binding.vacancy.text = recommendationResponseItem.vacancy
+            binding.companyName.text ="Company: "+ recommendationResponseItem.company_name
+            binding.govtPvt.text = "Govt/Pvt: "+recommendationResponseItem.govt
+            binding.jobTitle.text = "Job Title: "+recommendationResponseItem.job_title
+            binding.experience.text ="Experience: "+ recommendationResponseItem.experience
+            binding.vacancy.text = "Vacancy: "+recommendationResponseItem.vacancy
         }
     }
 
