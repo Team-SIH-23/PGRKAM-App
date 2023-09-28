@@ -1,6 +1,7 @@
 package com.assignment.pgrkam_app.ui.fragments
 
 import android.annotation.SuppressLint
+import android.content.res.ColorStateList
 import android.os.Bundle
 import android.util.Log
 import android.view.LayoutInflater
@@ -59,9 +60,12 @@ class MostSuitableJobsFragment : Fragment() {
                         }
                         is GovtJobsUiState.GovtJobsList -> {
                             govList = it.list
+                            binding.progress.visibility = View.GONE
+                            binding.main.visibility = View.VISIBLE
                         }
                         GovtJobsUiState.Loading -> {
-
+                            binding.progress.visibility = View.VISIBLE
+                            binding.main.visibility = View.GONE
                         }
                     }
                 }
@@ -79,11 +83,17 @@ class MostSuitableJobsFragment : Fragment() {
                     binding.rvGovernment.visibility = View.GONE
                     binding.rvPrivate.visibility = View.GONE
                     binding.rvRecommended.visibility = View.VISIBLE
+                    binding.button1.backgroundTintList = ColorStateList.valueOf(resources.getColor(R.color.app_light))
+                    binding.button2.backgroundTintList = ColorStateList.valueOf(resources.getColor(R.color.white))
+                    binding.button3.backgroundTintList = ColorStateList.valueOf(resources.getColor(R.color.white))
                 }
                 R.id.button2 -> {
                     binding.rvGovernment.visibility = View.GONE
                     binding.rvPrivate.visibility = View.VISIBLE
                     binding.rvRecommended.visibility = View.GONE
+                    binding.button1.backgroundTintList = ColorStateList.valueOf(resources.getColor(R.color.white))
+                    binding.button2.backgroundTintList = ColorStateList.valueOf(resources.getColor(R.color.app_light))
+                    binding.button3.backgroundTintList = ColorStateList.valueOf(resources.getColor(R.color.white))
                     Toast.makeText(requireContext(),"Private",Toast.LENGTH_LONG).show()
 
                 }
@@ -91,6 +101,9 @@ class MostSuitableJobsFragment : Fragment() {
                     binding.rvGovernment.visibility = View.VISIBLE
                     binding.rvPrivate.visibility = View.GONE
                     binding.rvRecommended.visibility = View.GONE
+                    binding.button1.backgroundTintList = ColorStateList.valueOf(resources.getColor(R.color.white))
+                    binding.button2.backgroundTintList = ColorStateList.valueOf(resources.getColor(R.color.white))
+                    binding.button3.backgroundTintList = ColorStateList.valueOf(resources.getColor(R.color.app_light))
                     adapter = MostSuitableJobsAdapter(govList)
                     binding.rvGovernment.adapter = adapter
                     binding.rvGovernment.layoutManager =LinearLayoutManager(requireContext())
