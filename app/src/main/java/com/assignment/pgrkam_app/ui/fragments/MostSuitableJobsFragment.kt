@@ -23,6 +23,8 @@ import com.assignment.pgrkam_app.ui.adapter.RecommendationAdapter
 import com.assignment.pgrkam_app.utils.GovtJobsUiState
 import com.assignment.pgrkam_app.viewmodels.GovtJobsViewModel
 import com.assignment.pgrkam_app.viewmodels.RecommendationViewModel
+import com.posthog.android.PostHog
+import com.posthog.android.Properties
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.launch
 
@@ -80,6 +82,9 @@ class MostSuitableJobsFragment : Fragment() {
         binding.toggleButton.addOnButtonCheckedListener { toggleButton, checkedId, isChecked ->
             when(checkedId) {
                 R.id.button1 -> {
+                    val eventProperties = Properties()
+                        .putValue("Button Clicked", "Recommended Jobs")
+                    PostHog.with(requireContext()).capture("Recommended Jobs", eventProperties)
                     binding.rvGovernment.visibility = View.GONE
                     binding.rvPrivate.visibility = View.GONE
                     binding.rvRecommended.visibility = View.VISIBLE
@@ -98,6 +103,9 @@ class MostSuitableJobsFragment : Fragment() {
 
                 }
                 R.id.button3 -> {
+                    val eventProperties = Properties()
+                        .putValue("Button Clicked", "Government Jobs")
+                    PostHog.with(requireContext()).capture("Government Jobs", eventProperties)
                     binding.rvGovernment.visibility = View.VISIBLE
                     binding.rvPrivate.visibility = View.GONE
                     binding.rvRecommended.visibility = View.GONE

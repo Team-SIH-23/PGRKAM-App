@@ -13,8 +13,8 @@ class PgrkamApplication : Application() {
         val posthog =
             PostHog.Builder(
                 this,
-                "phc_hWR3oOZKslKrvx4p2uYgJTcqLDM4AaDd1TTnfA0djxh",
-                "https://610a-103-215-237-106.ngrok-free.app"
+                "phc_o1HXu9FckrqYTc9YKbFlPeZrXkk40BYZlto5LmAiQ0L",
+                "https://a7ae-2402-e280-2146-325-7de6-90c1-fafe-79b1.ngrok-free.app/"
             )
                 .captureApplicationLifecycleEvents()
                 .recordScreenViews()
